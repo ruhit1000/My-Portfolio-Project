@@ -30,6 +30,12 @@
     cursor: pointer;
 }
 
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
 .section-heading {
     max-width: 827px;
     text-align: center;
@@ -277,17 +283,50 @@ footer .footer-container {
     color: #757575;
 }
 
-.hide {
-    display: none !important;
-}
-
 @media screen and (max-width:576px) {
-    #skills .skills-container {
+
+    #skills .skills-container,
+    footer .footer-container,
+    #resume .resume-container,
+    nav {
         width: 95%;
     }
 
     .section-heading h2 {
         font-size: 30px;
+    }
+
+    .btn-group {
+        justify-content: center;
+    }
+
+    header {
+        background: url(../images/header_bg.png), #FFF8F3;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
+
+    nav {
+        gap: 20px;
+    }
+
+    nav .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #banner {
+        margin: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #banner .banner-image img {
+        width: 100%;
+    }
+
+    #banner .banner-content h1 {
+        font-size: 45px;
     }
 
     #about,
@@ -296,7 +335,21 @@ footer .footer-container {
         padding-top: 60px;
     }
 
-    #skills .skills-container .skill-box {
+    #about .about-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    #about .about-container .about-info {
+        gap: 40px;
+    }
+
+    #skills .skills-container .skill-box,
+    #about .about-container .about-info,
+    footer .footer-container,
+    #resume .resume-container,
+    nav,
+    #banner {
         flex-direction: column;
     }
 
@@ -304,15 +357,17 @@ footer .footer-container {
         max-width: 100%;
     }
 
-    #about .about-container {
-        width: 95%;
-        text-align: center;
-        background-color: #FFF8F3;
-        padding: 20px;
+    #resume .resume-container {
+        margin-top: 60px;
     }
 
-    #about .about-container .about-info {
-        flex-direction: column;
-        gap: 15px;
+    .resume-card {
+        margin-right: 10px;
     }
+
+    .footer-container form input[type="text"],
+    .footer-container form textarea {
+        width: 80%;
+    }
+
 }
