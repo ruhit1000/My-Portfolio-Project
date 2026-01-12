@@ -167,7 +167,6 @@ nav .menu a {
 
 .skill-box .skill-card {
     padding: 30px;
-    /* border: 1px solid red; */
     max-width: 267px;
     box-shadow: 0 6px 50px 0 #0000002f;
 }
@@ -267,7 +266,8 @@ footer .footer-container {
     margin-right: 24px;
 }
 
-.footer-container form input[type="text"], .footer-container form textarea {
+.footer-container form input[type="text"],
+.footer-container form textarea {
     width: 461px;
     padding: 18px 31px;
     margin-bottom: 24px;
@@ -275,4 +275,44 @@ footer .footer-container {
     border-radius: 5px;
 
     color: #757575;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media screen and (max-width:576px) {
+    #skills .skills-container {
+        width: 95%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    #about,
+    #skills,
+    #resume {
+        padding-top: 60px;
+    }
+
+    #skills .skills-container .skill-box {
+        flex-direction: column;
+    }
+
+    .skill-box .skill-card {
+        max-width: 100%;
+    }
+
+    #about .about-container {
+        width: 95%;
+        text-align: center;
+        background-color: #FFF8F3;
+        padding: 20px;
+    }
+
+    #about .about-container .about-info {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
